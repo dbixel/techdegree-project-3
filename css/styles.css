@@ -1,4 +1,93 @@
-/*label {
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+}
+
+h1 {
+  color: white;
+  background-color: #222B35;
+  margin-top: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+legend {
+  font-size: 1.4em;
+}
+
+fieldset {
+  border: none;
+}
+
+#contact input {
+  width: 100%;
+}
+
+input,
+textarea,
+button {
+  background-color: #EBECEE;
+  border: none;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  margin-right: 10px;
+}
+
+textarea,
+button {
+  width: 100%;
+}
+
+/*******************************
+Layout Containers
+*******************************/
+
+.main-header {
+  text-align: center;
+}
+
+.label-input {
+  margin-bottom: 10px;
+}
+
+.label-input input,
+button {
+  height: 40px;
+}
+
+/*.input-label label {
   display: block;
-  margin-bottom: 8px;
 }*/
+/*******************************
+Media Quries
+*******************************/
+
+@media (min-width: 768px) {
+  .container {
+    width: 50%;
+    max-width: 1024px;
+    margin: auto;
+  }
+
+  .label-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #contact input {
+    width: 75%;
+  }
