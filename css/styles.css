@@ -3,18 +3,10 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Merriweather', serif;
-}
-
-button {
-  font-family: 'Merriweather', serif;
-}
-
 header {
   padding-bottom: 20px;
   margin-top: 25px;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
   border-bottom: 4px solid black;
 }
 
@@ -31,21 +23,21 @@ h1 {
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 21px;
   margin-bottom: 10px;
 }
 
 p {
   color: #BFC3C7;
-  font-size: 12px;
+  font-size: 14px;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 0;
 }
 
 legend {
-  font-size: 15px;
-  /*margin-top: 25px;*/
+  font-size: 17px;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
@@ -66,10 +58,14 @@ textarea {
 
 input,
 textarea,
-select {
+select,
+button {
+  color: #677584;
   background-color: #EBECEE;
   border: none;
   border-radius: 5px;
+  font-family: 'Merriweather', serif;
+  padding: 10px;
 }
 
 button {
@@ -82,14 +78,21 @@ button {
 footer {
   text-align: center;
   color: #BFC3C7;
-  font-size: 12px;
+  font-size: 14px;
   font-style: italic;
   margin-bottom: 200px;
+}
+
+input::placeholder {
+  text-align: right;
+  font-style: italic;
+  color: #BFC3C7;
 }
 
 input[type=checkbox],
 input[type=radio] {
   margin-right: 10px;
+  border: none;
 }
 
 textarea,
@@ -97,8 +100,6 @@ button,
 select {
   width: 100%;
 }
-
-
 
 /*******************************
 Layout Containers
@@ -108,6 +109,10 @@ Layout Containers
   text-align: center;
   margin-left: 15px;
   margin-right: 15px;
+}
+
+.main-label {
+  margin-bottom: 0;
 }
 
 #contact input:not(#zip) {
@@ -120,9 +125,11 @@ Layout Containers
 }
 
 #contact,
-#newsletter {
+#newsletter,
+input,
+select {
   color: #677584;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .contact-form {
