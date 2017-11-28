@@ -23,7 +23,7 @@ h1 {
 }
 
 h2 {
-  font-size: 21px;
+  font-size: 22px;
   margin-bottom: 10px;
 }
 
@@ -154,6 +154,24 @@ select {
 button,
 select {
   height: 50px;
+}
+
+input:focus {
+  background: #A9FFE1;
+  transition-duration: .6s;
+  outline: none;
+}
+
+select:focus {
+  background: #A9FFE1;
+  transition-duration: .6s;
+  outline: none;
+}
+
+textarea:focus {
+  background: #A9FFE1;
+  transition-duration: .6s;
+  outline: none;
 }
 
 
