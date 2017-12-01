@@ -1,6 +1,13 @@
+/*******************************
+Element Selectors
+*******************************/
 
 * {
   box-sizing: border-box;
+}
+
+body {
+  background-image: url("../img/marble-floor.jpg");
 }
 
 header {
@@ -14,7 +21,7 @@ h1 {
   color: white;
   background-color: #222B35;
   margin-top: 0;
-  margin-bottom: 45px;
+  margin-bottom:0;
   padding-top: 20px;
   padding-bottom: 20px;
   text-transform: uppercase;
@@ -25,6 +32,7 @@ h1 {
 h2 {
   font-size: 22px;
   margin-bottom: 10px;
+  margin-top: 0;
 }
 
 p {
@@ -80,30 +88,7 @@ footer {
   color: #BFC3C7;
   font-size: 14px;
   font-style: italic;
-  margin-bottom: 200px;
-}
-
-::-webkit-input-placeholder { /* Chrome */
-  color: #BFC3C7;
-  text-align: right;
-  font-style: italic;
-}
-:-ms-input-placeholder { /* IE 10+ */
-  color: #BFC3C7;
-  text-align: right;
-  font-style: italic;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color: #BFC3C7;
-  opacity: 1;
-  text-align: right;
-  font-style: italic;
-}
-:-moz-placeholder { /* Firefox 4 - 18 */
-  color: #BFC3C7;
-  opacity: 1;
-  text-align: right;
-  font-style: italic;
+  padding-bottom: 200px;
 }
 
 input[type=checkbox],
@@ -118,29 +103,6 @@ select {
   width: 100%;
 }
 
-/*******************************
-Layout Containers
-*******************************/
-
-.main-header {
-  text-align: center;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
-.main-label {
-  margin-bottom: 0;
-}
-
-#contact input:not(#zip) {
-  width: 100%;
-}
-
-#contact input[id="zip"] {
-  margin-right: 80%;
-  width: 50%;
-}
-
 #contact,
 #newsletter,
 input,
@@ -150,6 +112,63 @@ select {
 }
 
 label[for="topics"] {
+  margin-bottom: 0;
+}
+
+.label-input input,
+button,
+select {
+  height: 50px;
+}
+
+/*******************************
+Vendor Prefixes
+*******************************/
+
+::-webkit-input-placeholder { /* Chrome */
+  color: #BFC3C7;
+  font-size: 12px;
+  text-align: right;
+  font-style: italic;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-size: 12px;
+  color: #BFC3C7;
+  text-align: right;
+  font-style: italic;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-size: 12px;
+  color: #BFC3C7;
+  opacity: 1;
+  text-align: right;
+  font-style: italic;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  font-size: 12px;
+  color: #BFC3C7;
+  opacity: 1;
+  text-align: right;
+  font-style: italic;
+}
+
+/*******************************
+Layout Containers
+*******************************/
+
+.container {
+  background-color: white;
+  padding-top: 45px;
+}
+
+.main-header {
+  text-align: center;
+  margin-top: 0;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.main-label {
   margin-bottom: 0;
 }
 
@@ -171,26 +190,50 @@ label[for="topics"] {
   padding-bottom: 20px;
 }
 
-.label-input input,
-button,
-select {
-  height: 50px;
+#contact input:not(#zip) {
+  width: 100%;
 }
+
+#contact input[id="zip"] {
+  margin-right: 80%;
+  width: 50%;
+}
+
+/*******************************
+Select Option Gray
+*******************************/
+
+select,
+select option {
+  color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+  color: #BFC3C7;
+  font-size: 12px;
+}
+
+/*******************************
+Focus and Hover
+*******************************/
 
 input:focus,
 select:focus,
 textarea:focus {
-  background: #FBF799;
-  transition-duration: .5s;
+  background: #FFFDD6;
+  transition-duration: 1s;
   outline: none;
+  cursor: pointer;
 }
 
 input:hover,
 select:hover,
 textarea:hover {
-  background: #A9FFE1;
+  background: #CFFCF9;
   outline: none;
-  transition-duration: .5s;
+  transition-duration: 1s;
+  cursor: pointer;
 }
 
 /*******************************
@@ -199,8 +242,8 @@ Media Queries
 
 @media (min-width: 768px) {
   .container {
-    width: 50%;
-    max-width: 1024px;
+    /*width: 65%;*/
+    max-width: 800px;
     margin: auto;
   }
 
